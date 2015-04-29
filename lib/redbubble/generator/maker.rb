@@ -26,7 +26,7 @@ module Redbubble
       def set_thumnails(cameras, maker)
         cameras[maker].keys.each { |model|
           cameras[maker][model].each { |url|
-            return if @thumnails.size > Redbubble::LIMIT
+            return unless @thumnails.size < Redbubble::LIMIT
             @thumnails << Anchor.new(model, url)
           }
         }
@@ -35,4 +35,3 @@ module Redbubble
     end
   end
 end
-
