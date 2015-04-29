@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <style type="text/css">
+    nav {
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><%= title %></h1>
+
+    <nav>
+  <% unless navigation.empty? %>
+    <% navigation.each do |nav| %>
+      <a href="<%= nav.href %>"><%= nav.title %></a>
+    <% end %>
+  <% end %>
+    </nav>
+  </header>
+
+  <% unless thumnails.empty? %>
+    <% thumnails.each do |thumnail| %>
+      <img src="<%= thumnail.href %>" alt="<%= thumnail.title %>">
+    <% end %>
+  <% end %>
+
+</body>
+</html>
