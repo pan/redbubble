@@ -1,3 +1,6 @@
+[![Code Climate](https://codeclimate.com/github/pan/redbubble/badges/gpa.svg)]
+(https://codeclimate.com/github/pan/redbubble)
+
 # Installation
 
 ## Ruby
@@ -7,18 +10,20 @@ verion is recommended.
 
 ## The required gems 
 
-  $ bundle install
+  `$ bundle install`
 
 # Usage Notes
 
 You may get the help like below by invoking it with option '-h' or '--help'.
 It will abort the execution if all the required options are not provided.
 
+```
 $ ./batch_processor.rb -h
 Usage: batch_processor <options>
     -i, --input works.xml            Full path to the works file
     -o, --output directory           Output to this directory
     -h, --help                       Show this help message
+```
 
 Once the program finishes the generation, navigate to the output directory and
 open index.html with a modern browser.
@@ -27,11 +32,11 @@ open index.html with a modern browser.
 
 The code is tested with ruby v2.1.2 on a Linux.  Run all the test cases, type
 
-$ rake
+`$ rake`
 
 Or run a particular test. For example, 
 
-$ ruby test/test_camera.rb -n test_set_maker
+`$ ruby test/test_camera.rb -n test_set_maker`
 
 # Performance
 
@@ -46,9 +51,6 @@ data set.
 If you experience too many opened files issue, some tunning may help.
 On Linux, verify and change how many files are allowed to be opened.
 
-$ ulimit -n
+`$ ulimit -n`
 
 On Mac, this can be done with launchctl.
-
-[![Code Climate](https://codeclimate.com/github/pan/redbubble/badges/gpa.svg)]
-(https://codeclimate.com/github/pan/redbubble)
