@@ -49,3 +49,6 @@ On Linux, verify and change how many files are allowed to be opened.
 $ ulimit -n
 
 On Mac, this can be done with launchctl.
+
+[![Code Climate](https://codeclimate.com/github/pan/redbubble/badges/gpa.svg)]
+(https://codeclimate.com/github/pan/redbubble)
