@@ -9,10 +9,10 @@ module Redbubble
       @urls = Redbubble::Image::URL.new @firstwork
     end
 
-    def test_set_small
-      @urls.set_small(@firstwork)
+    def test_update_small_from
+      @urls.update_small_from(@firstwork)
       expected_url = 
-        "http://ih1.redbubble.net/work.31820.1.flat,135x135,075,f.jpg"
+        'http://ih1.redbubble.net/work.31820.1.flat,135x135,075,f.jpg'
       assert_equal expected_url, @urls.small
     end
 
