@@ -1,5 +1,4 @@
 module Redbubble
-
   # get all works
   class Works
     attr_reader :works
@@ -9,16 +8,15 @@ module Redbubble
       @works = []
       doc = Redbubble::Input.load(xml_input)
       worknodes = doc.css('work')
-      set_works(worknodes)
+      update_works_from(worknodes)
     end
 
     # create works array with all work object from Nokogiri +worknodes+
-    def set_works(worknodes)
-      worknodes.each { |worknode|
+    def update_works_from(worknodes)
+      worknodes.each do |worknode|
         work = Redbubble::Work.new worknode
         @works << work
-      }
+      end
     end
-
   end
 end

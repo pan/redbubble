@@ -9,8 +9,8 @@ module Redbubble
       @work = Redbubble::Work.new @firstwork
     end
 
-    def test_set_filename
-      @work.set_filename(@firstwork)
+    def test_update_filename_from
+      @work.update_filename_from(@firstwork)
       assert_equal "162042.jpg", @work.filename
     end
 

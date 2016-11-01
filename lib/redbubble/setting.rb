@@ -3,8 +3,8 @@ module Redbubble
   LIMIT = 10
 
   # this project root path
-  PROJECT_PATH = File.expand_path("../../../", __FILE__)
+  PROJECT_PATH = File.expand_path('../../../', __FILE__)
 
   # the index page name
-  INDEX_PAGE = "index.html"
+  INDEX_PAGE = 'index.html'.freeze
 end
