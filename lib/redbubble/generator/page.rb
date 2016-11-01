@@ -8,8 +8,8 @@ module Redbubble
 
       # new a page
       def initialize
-        @path = File.join Redbubble::PROJECT_PATH, "out"
-        @title = " "
+        @path = File.join Redbubble::PROJECT_PATH, 'out'
+        @title = ' '
         @navigation = []
         @thumnails = []
       end
@@ -22,22 +22,21 @@ module Redbubble
       end
 
       # set the page file name
-      def set_name(name)
+      def setname(name)
         @name = mkname(name)
       end
 
       # add file extention ".html" and some udpates to ensure it is safe to be
       # used as a file name
-      def mkname(name)      
-        mkvalid_char(name) + ".html"
+      def mkname(name)
+        mkvalid_char(name) + '.html'
       end
 
       # some chars are invalid in different file systems, convert them to '_'
       # for all of them
       def mkvalid_char(name)
-        name.gsub /[\s[^\w\d]]/, '_'
+        name.gsub(/[\s[^\w\d]]/, '_')
       end
-
     end
   end
 end

@@ -16,7 +16,7 @@ module Redbubble
       assert @engine.cameras
     end
 
-    def test_set_cameras
+    def test_update_cameras_from
       assert @cameras[@maker].keys
     end
 
@@ -30,11 +30,11 @@ module Redbubble
       assert_operator @engine.index.thumnails.size, :>, 0
     end
 
-    def test_set_makers
+    def test_update_makers
       assert_operator @engine.makers.size,  :>, 0
     end
 
-    def test_set_models
+    def test_update_models
       assert_operator @engine.models.size,  :>, 0
     end
 

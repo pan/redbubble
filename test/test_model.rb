@@ -15,9 +15,9 @@ module Redbubble
       assert_equal @model, @page.title
     end
 
-    def test_set_thumnails
+    def test_update_thumnails_from
       @page.thumnails = []
-      @page.set_thumnails(@model, @url)
+      @page.update_thumnails_from(@model, @url)
       assert Redbubble::LIMIT >= @page.thumnails.size
     end
 
@@ -25,9 +25,9 @@ module Redbubble
       assert_respond_to @page, 'thumnails'
     end
 
-    def test_set_navigation
+    def test_update_navigation_from
       @page.navigation = []
-      @page.set_navigation(@maker)
+      @page.update_navigation_from(@maker)
       assert_operator @page.navigation.size, :>, 0
     end
 

@@ -22,8 +22,8 @@ module Redbubble
       assert File.exists? file
     end
 
-    def test_set_name
-      @page.set_name("a_model")
+    def test_setname
+      @page.setname("a_model")
       assert_equal "a_model.html", @page.name
     end
 

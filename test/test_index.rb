@@ -15,9 +15,9 @@ module Redbubble
       assert_equal "index.html", @page.name
     end
 
-    def test_set_thumnails
+    def test_update_thumnails_from
       @page.thumnails = []
-      @page.set_thumnails(@works)
+      @page.update_thumnails_from(@works)
       assert_equal LIMIT, @page.thumnails.size
     end
 

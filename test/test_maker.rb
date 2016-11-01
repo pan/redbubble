@@ -17,9 +17,9 @@ module Redbubble
       assert_equal "Canon.html", @page.name
     end
 
-    def test_set_thumnails
+    def test_update_thumnails_from
       @page.thumnails = []
-      @page.set_thumnails(@cameras, @maker)
+      @page.update_thumnails_from(@cameras, @maker)
       assert_operator Redbubble::LIMIT, :>=, @page.thumnails.size
     end
 
@@ -27,9 +27,9 @@ module Redbubble
       assert_respond_to @page, 'thumnails'
     end
 
-    def test_set_navigation
+    def test_update_navigation_from
       @page.navigation = []
-      @page.set_navigation(@cameras, @maker)
+      @page.update_navigation_from(@cameras, @maker)
       assert_operator @page.navigation.size, :>, 0
     end
 
