@@ -8,13 +8,13 @@ module Redbubble
       @camera = Redbubble::Camera.new @firstwork
     end
 
-    def test_set_maker
-      @camera.set_maker(@firstwork)
+    def test_setmaker
+      @camera.setmaker(@firstwork)
       assert_equal "NIKON CORPORATION", @camera.maker
     end
 
-    def test_set_model
-      @camera.set_model(@firstwork)
+    def test_setmodel
+      @camera.setmodel(@firstwork)
       assert_equal "NIKON D80", @camera.model
     end
   end
