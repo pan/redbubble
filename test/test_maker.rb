@@ -35,10 +35,10 @@ module Redbubble
 
     def test_generate
       file = File.join(@page.path, @page.name)
-      File.unlink file if File.exists? file
-      Dir.mkdir @page.path unless Dir.exists? @page.path
+      File.unlink file if File.exist? file
+      Dir.mkdir @page.path unless Dir.exist? @page.path
       @page.generate
-      assert File.exists? file
+      assert File.exist? file
     end
 
     def test_name

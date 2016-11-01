@@ -44,9 +44,9 @@ module Redbubble
 
     def test_run
       file = File.join TEST_OUTPUT, "FinePix_S6500fd.html"
-      File.unlink file if File.exists? file
+      File.unlink file if File.exist? file
       @engine.run
-      assert File.exists? file
+      assert File.exist? file
     end
 
   end
